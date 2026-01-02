@@ -14,9 +14,9 @@ public class LogManager extends Manager{
 
     private LogManager(){
         super(); //calls the protected constructor of Manager
-        this.managerType = "LogManager";
+
         try {
-            // 1. Initialize the file handler ONCE
+            // Initialize the file handler ONCE
             // The 'true' argument means "append" to the file instead of overwriting
             fh = new FileHandler("debugLog.log", true);
             logger.addHandler(fh);
@@ -30,6 +30,7 @@ public class LogManager extends Manager{
         }
 
         this.startUp();
+        this.managerType = "LogManager";
         writeLog("LogManager is started.");
     }
 
