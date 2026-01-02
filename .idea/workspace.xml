@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cd2e1c4f-d515-4fc5-a1d0-aa5bea6de9ed" name="Changes" comment="SceneManager started to store scenes in HashMap.&#10;&#10;WIP: Ensures game scenes can be stored and structured in a graph called SceneGraph.&#10;&#10;TBI:&#10;- setting source, destination scenes&#10;- with the implm. of Resource Manager and Event Manager, will be testing out how individual scenes can be structured // made dynamic" />
+    <list default="true" id="cd2e1c4f-d515-4fc5-a1d0-aa5bea6de9ed" name="Changes" comment="pweh.">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/SceneManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/SceneManager.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -19,6 +22,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectColorInfo"><![CDATA[{
   "associatedIndex": 5
@@ -64,7 +70,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1767052090715</updated>
-      <workItem from="1767052092029" duration="6922000" />
+      <workItem from="1767052092029" duration="7672000" />
     </task>
     <task id="LOCAL-00001" summary="Base Manager Class and Log Manager skeleton formed">
       <option name="closed" value="true" />
@@ -90,7 +96,15 @@
       <option name="project" value="LOCAL" />
       <updated>1767377840474</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="pweh.">
+      <option name="closed" value="true" />
+      <created>1767378064837</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1767378064837</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -99,6 +113,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Base Manager Class and Log Manager skeleton formed" />
     <MESSAGE value="SceneManager started to store scenes in HashMap.&#10;&#10;WIP: Ensures game scenes can be stored and structured in a graph called SceneGraph.&#10;&#10;TBI:&#10;- setting source, destination scenes&#10;- with the implm. of Resource Manager and Event Manager, will be testing out how individual scenes can be structured // made dynamic" />
-    <option name="LAST_COMMIT_MESSAGE" value="SceneManager started to store scenes in HashMap.&#10;&#10;WIP: Ensures game scenes can be stored and structured in a graph called SceneGraph.&#10;&#10;TBI:&#10;- setting source, destination scenes&#10;- with the implm. of Resource Manager and Event Manager, will be testing out how individual scenes can be structured // made dynamic" />
+    <MESSAGE value="pweh." />
+    <option name="LAST_COMMIT_MESSAGE" value="pweh." />
   </component>
 </project>

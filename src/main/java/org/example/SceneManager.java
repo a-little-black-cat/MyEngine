@@ -25,13 +25,28 @@ public class SceneManager extends Manager{
         return instance;
     }
 
+    // Object of SceneGraph is created. Scenes are stored as Strings
+    Graph<String> SGMap = new Graph<String>();
 
+    // When called, developer can connect source scene and destination scene, with the option of bidirectionality.
+    public void addScene(String source, String destination, boolean bidirectional){
+        SGMap.addEdge(source, destination, bidirectional);
+        LM.writeLog("Scene "+ source+ " has been connected to "+ destination);
 
+        //Check if source and destination were added successfully
+        SGMap.hasVertex(source);
+        SGMap.hasVertex(destination);
 
+        //Check if source and destination were linked successfully
+        SGMap.hasEdge(source, destination);
 
+        // Check neighbours of source
+        SGMap.neighbours(source);
 
+        // Check neighbours of destination
 
-
+        SGMap.neighbours(destination);
+    }
 
 }
 
@@ -39,8 +54,6 @@ public class SceneManager extends Manager{
 class Graph<T>{
     // Resource: https://www.geeksforgeeks.org/java/implementing-generic-graph-in-java/
     LogManager LM = LogManager.getInstance(); // for Logging purposes
-
-
 
     // HashMap to store edges of the SceneGraph
 
@@ -103,8 +116,33 @@ class Graph<T>{
         else {
             System.out.println("The SceneGraph does not contain "
                     + s + " as a vertex.");
-            LM.writeLog("Error (SceneGraph): Scene " + s + " doest not exist on SceneGraph. Check for invalid insertion." );
+            LM.writeLog("Error (SceneGraph-vertex): Scene " + s + " doest not exist on SceneGraph. Check for invalid insertion." );
         }
+    }
+
+    // Check if edges between s and d were added properly
+    public void hasEdge(T s, T d){
+        if (SceneGraph.get(s).contains(d)) {
+            System.out.println(
+                    "The SceneGraph has an edge between scenes " + s
+                            + " and " + d + ".");
+        }
+        else {
+            System.out.println(
+                    "The SceneGraph has no edge between scenes " + s
+                            + " and " + d + ".");
+            LM.writeLog("Error (SceneGraph-edge): Scenes " + s + " and " + d + " are not connected properly. Check for invalid insertion." );
+        }
+
+    }
+
+    public void neighbours(T s)
+    {
+        if(!SceneGraph.containsKey(s))
+            return ;
+        System.out.println("The neighbours of "+s+" are");
+        for(T w:SceneGraph.get(s))
+            System.out.print(w+",");
     }
 
 
